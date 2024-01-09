@@ -28,6 +28,7 @@ class Task008Test {
     var activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
+//    скрывать
     fun test_hide_text() {
         onView(
             allOf(
