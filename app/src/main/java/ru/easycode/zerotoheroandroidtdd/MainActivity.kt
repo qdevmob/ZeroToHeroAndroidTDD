@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             textView.text = "I am an Android Developer!"
         }
+        savedInstanceState?.let {
+            textView.text = it.getString("key")
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -25,8 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        textView.text=savedInstanceState.getString("key")
-    }
+//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+//        super.onRestoreInstanceState(savedInstanceState)
+//        textView.text=savedInstanceState.getString("key")
+//    }
 }
