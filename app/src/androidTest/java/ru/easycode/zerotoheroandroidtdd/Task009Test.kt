@@ -28,6 +28,7 @@ class Task009Test {
     var activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
+//    удалять
     fun test_remove_textview() {
         onView(
             allOf(
