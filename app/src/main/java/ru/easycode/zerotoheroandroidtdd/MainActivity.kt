@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
         textView = findViewById(R.id.titleTextView)
         linearLayout = findViewById(R.id.rootLayout)
 
-
-
         button.setOnClickListener {
             state = State.Remove
             state.apply(linearLayout, textView, button)
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        savedInstanceState.getSerializable("state")
+        savedInstanceState.getSerializable("state").let { state = it as State }
         state.apply(linearLayout, textView, button)
     }
 }
