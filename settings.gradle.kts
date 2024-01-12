@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ZeroToHeroAndroidTDD"
 include(":app")
- 
+include(":features:student_edit_api")
